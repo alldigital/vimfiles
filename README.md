@@ -1,11 +1,13 @@
-# [alldigital](http://github.com/alldigital)'s [Vim configuration](http://github.com/alldigital/vimfiles)
+# [alldigital](http://github.com/alldigital)'s [vim configuration](http://github.com/alldigital/vimfiles)
 
-to try it out:
+To install (make sure there's no ~/vim, delete if necessary):
 
-    $ mkdir -p /tmp/vimtest && cd /tmp/vimtest                               # create and cd to test folder
-    $ git clone --recursive https://github.com/alldigital/vimfiles.git ./.vim    # clone recursively with vundle
-    $ HOME=`pwd` vim -u .vim/vimrc +BundleInstall +qall                     # run installation in relative to current folder
-                                                                            # and using downloaded `vimrc`
-    $ HOME=`pwd` vim -u .vim/vimrc                                          # Start using Vim
-
+    $ cd ~                                                                      # Welcome Home!
+    $ git clone --recursive https://github.com/alldigital/vimfiles.git ./.vim   # clone recursively with vundle submodule
+    $ ln -sf .vim/vimrc ~/.vim/vimrc                                            # we've got a new vimrc!
+    $ vim +BundleInstall +qall                                                  # run installation 
+    $ vim                                                                       # Let's party
+    
 *NOTE*: add `-g` argument to the `vim` command to use graphical UI if you like
+
+This is a fork of [gmarik's](https://github.com/gmarik/vimfiles) vimfiles. He's a genius! Thanks gmarik!
