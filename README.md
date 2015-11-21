@@ -4,7 +4,7 @@ To install (make sure there's no ~/vim, delete if necessary):
 
     $ cd ~                                                                      # Welcome Home!
     $ git clone --recursive https://github.com/alldigital/vimfiles.git ./.vim   # clone recursively with vundle submodule
-    $ ln -sf .vim/vimrc ~/.vim/vimrc                                            # we've got a new vimrc!
+    $ ln -sf .vim/vimrc ~/.vimrc                                            # we've got a new vimrc!
     $ vim +BundleInstall +qall                                                  # run installation 
     $ vim                                                                       # Let's party
     
