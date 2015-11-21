@@ -74,7 +74,8 @@ Plugin 'tpope/vim-vinegar.git'
 Plugin 'FuzzyFinder'
 Plugin 'L9'
 Plugin 'snipMate'
-Plugin 'snipmate-snippets'
+
+Plugin 'matchit.zip'
 
 " End of plugins
 filetype plugin indent on      " Automatically detect file types.
