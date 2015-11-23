@@ -1,3 +1,4 @@
+set nocompatible
 syntax enable
 set background=dark
 colorscheme solarized
@@ -70,6 +71,14 @@ Plugin 'tpope/vim-fugitive.git'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'tpope/vim-vinegar.git'
 
+<<<<<<< HEAD
+=======
+Plugin 'FuzzyFinder'
+Plugin 'L9'
+Plugin 'snipMate'
+
+Plugin 'matchit.zip'
+>>>>>>> bce9df322d3720b0015ad4d7bd3012bc2c9004bb
 
 " End of plugins
 filetype plugin indent on      " Automatically detect file types.
