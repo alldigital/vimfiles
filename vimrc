@@ -4,6 +4,7 @@ set background=dark
 colorscheme solarized
 set laststatus=2
 let g:airline_powerline_fonts = 1
+let g:powerline_pycmd = "py3"
 
 " Set to auto read when a file is changed from the outside
 set autoread
