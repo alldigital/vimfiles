@@ -74,6 +74,8 @@ Plugin 'tpope/vim-fugitive.git'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'tpope/vim-vinegar.git'
 
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 Plugin 'FuzzyFinder'
 Plugin 'L9'
 Plugin 'snipMate'
