@@ -7,6 +7,10 @@ let g:airline_powerline_fonts = 1
 " For Python 3
 let g:powerline_pycmd = "py3"
 
+" Set line numbering and relative numbering mode
+ set number
+ set relativenumber
+
 " Set to auto read when a file is changed from the outside
 set autoread
 
