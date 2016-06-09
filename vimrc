@@ -7,6 +7,11 @@ let g:airline_powerline_fonts = 1
 " For Python 3
 let g:powerline_pycmd = "py3"
 
+" Tab settings
+set tabstop 4
+set softtabstop=4
+set expandtab
+
 " Set line numbering and relative numbering mode
  set number
  set relativenumber
