@@ -8,7 +8,7 @@ let g:airline_powerline_fonts = 1
 let g:powerline_pycmd = "py3"
 
 " Tab settings
-set tabstop 4
+set tabstop=4
 set softtabstop=4
 set expandtab
 
