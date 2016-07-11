@@ -1,4 +1,4 @@
-source ~/.vim/theme
+source ~/.vim-theme
 set nocompatible
 syntax enable
 colorscheme solarized
@@ -94,6 +94,7 @@ Plugin 'snipMate'
 
 Plugin 'matchit.zip'
 Plugin 'KevinGoodsell/vim-csexact'
+Plugin 'ConradIrwin/vim-bracketed-paste'
 
 " End of plugins
 
