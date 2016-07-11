@@ -1,6 +1,6 @@
+source ~/.vim/theme
 set nocompatible
 syntax enable
-set background=dark
 colorscheme solarized
 set laststatus=2
 let g:airline_powerline_fonts = 1
@@ -46,6 +46,9 @@ map <leader>e :e! ~/.vimrc<cr>
 
 " When .vimrc is edited, reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc
+
+" make . work with visually selected lines
+vnoremap . :norm.<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
