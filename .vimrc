@@ -50,6 +50,17 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 " make . work with visually selected lines
 vnoremap . :norm.<CR>
 
+" Clipboard behavior
+set clipboard=unnamedplus
+" set paste
+" set go+=a               " Visual selection automatically copied to the clipboard
+ 
+" Clipboard keys
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -90,11 +101,23 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'FuzzyFinder'
 Plugin 'L9'
-Plugin 'snipMate'
-
 Plugin 'matchit.zip'
 Plugin 'KevinGoodsell/vim-csexact'
 Plugin 'ConradIrwin/vim-bracketed-paste'
+
+" Snippet Management
+Plugin 'SirVer/ultisnips'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+" Snippents:
+Plugin 'honza/vim-snippets'
 
 " End of plugins
 
