@@ -3,7 +3,17 @@ set nocompatible
 syntax enable
 colorscheme solarized
 set laststatus=2
+
+" Allow hidden buffers
+set hidden
+
 let g:airline_powerline_fonts = 1
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 " For Python 3
 let g:powerline_pycmd = "py3"
 
@@ -54,7 +64,7 @@ vnoremap . :norm.<CR>
 set clipboard=unnamedplus
 " set paste
 " set go+=a               " Visual selection automatically copied to the clipboard
- 
+
 " Clipboard keys
 vmap <C-c> "+yi
 vmap <C-x> "+c
@@ -89,11 +99,17 @@ call vundle#rc()
 
 Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle
 
-Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/syntastic.git'
-Plugin 'bling/vim-airline'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 Plugin 'easymotion/vim-easymotion'
+
+" Git related stuff
+Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive.git'
+
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'tpope/vim-vinegar.git'
 
@@ -121,11 +137,6 @@ Plugin 'honza/vim-snippets'
 
 " End of plugins
 
-" Indenting options
-" Disable comment auto-indenting
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " enable auto indent
 filetype plugin indent on      " Automatically detect file types.
-" Keyboard binding for on the fly indent switching
-nnoremap <F8> :setl noai nocin nosi inde=<CR>
 
