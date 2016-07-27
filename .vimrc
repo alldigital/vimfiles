@@ -2,20 +2,26 @@ source ~/.vim-theme
 set nocompatible
 syntax enable
 colorscheme solarized
-set laststatus=2
 
-" Allow hidden buffers
-set hidden
-
-let g:airline_powerline_fonts = 1
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
-
-" For Python 3
-let g:powerline_pycmd = "py3"
+" Generic options
+set history=1000    " History size
+set laststatus=2    " Always show status line
+" Set to auto read when a file is changed from the outside
+set autoread
+set autowrite       " Automatically save before commands like :next and :make
+set incsearch       " Incremental search
+set pastetoggle=<F2>
+set printoptions=paper:letter
+set showmatch       " Show matching brackets.
+set showcmd         " Show (partial) command in status line.
+set smartcase       " Case insensitive searches become sensitive with capitals
+set smarttab        " sw at the start of the line, sts everywhere else
+set visualbell
+setglobal tags=./tags;
+set wildmenu
+set wildmode=longest:full,full
+set wildignore+=tags,.*.un~,*.o,*~,*.pyc
+set hidden          " Allow hidden buffers
 
 " Tab settings
 set tabstop=4
@@ -26,8 +32,11 @@ set expandtab
  set number
  set relativenumber
 
-" Set to auto read when a file is changed from the outside
-set autoread
+" Dictionaries to use for completeion
+set dictionary+=/usr/share/dict/words
+
+set scrolloff=7     " Set 7 lines to the cursor - when moving vertically using j/k 
+set ruler           " Always show current position
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -37,15 +46,15 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" Show only selected in Visual Mode
-nmap <silent> <leader>th :cal ToggleSelected(0)<cr>
-vmap <silent> <leader>th :cal ToggleSelected(1)<cr>
+" Airline settings
+let g:airline_powerline_fonts = 1
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
-" Split the window using some nice shortcuts
-nmap <leader>s<bar> :vsplit<cr>
-nmap <leader>s- :split<cr>
-nmap <leader>s? :map <leader>s<cr>
-
+" For Python 3
+" let g:powerline_pycmd = "py3"
 " When pushing j/k on a line that is wrapped, it navigates to the same line,
 " just to the expected location rather than to the next line
 nnoremap j gj
@@ -71,31 +80,14 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => VIM user interface
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" " Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
-"
-" " Turn on the WiLd menu
-set wildmenu
-"
-" " Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-"
-" "Always show current position
-set ruler
-"
-
 " open help in vertical split
 au BufWinEnter {*.txt} if 'help' == &ft | wincmd H | nmap q :q<CR> | endif
 
 
 " Scripts and Plugins " {{{
 filetype off
-runtime macros/matchit.vim
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle
 
@@ -136,6 +128,8 @@ let g:UltiSnipsEditSplit="vertical"
 Plugin 'honza/vim-snippets'
 
 " End of plugins
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 
 " enable auto indent
 filetype plugin indent on      " Automatically detect file types.
