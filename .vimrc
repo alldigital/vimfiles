@@ -42,11 +42,14 @@ set ruler           " Always show current position
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
 
 " Fast saving
 nmap <leader>w :w!<cr>
+
+" Fast .vimrc edit
+nmap <leader>e :e! ~/.vimrc
 
 " Airline settings
 let g:airline_powerline_fonts = 1
