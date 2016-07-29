@@ -103,6 +103,9 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'easymotion/vim-easymotion'
 
+" Heurisric tabwidth detection
+Plugin 'tpope/vim-sleuth'
+
 " Git related stuff
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive.git'
