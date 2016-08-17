@@ -37,7 +37,7 @@ set expandtab
 " Dictionaries to use for completeion
 set dictionary+=/usr/share/dict/words
 
-set scrolloff=7     " Set 7 lines to the cursor - when moving vertically using j/k 
+set scrolloff=7     " Set 7 lines to the cursor - when moving vertically using j/k
 set ruler           " Always show current position
 
 " With a map leader it's possible to do extra key combinations
@@ -47,6 +47,9 @@ let g:mapleader = "\<Space>"
 
 " Fast saving
 nmap <leader>w :w!<cr>
+
+" Fast quit
+nmap <leader>q :q<cr>
 
 " Fast .vimrc edit
 nmap <leader>e :e! ~/.vimrc
@@ -74,10 +77,13 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 " make . work with visually selected lines
 vnoremap . :norm.<CR>
 
+" Online thesaurus for current word
+nnoremap <leader>t :OnlineThesaurusCurrentWord<CR>
+
 " Clipboard behavior
 set clipboard=unnamedplus
 " set paste
-" set go+=a               " Visual selection automatically copied to the clipboard
+set go+=a               " Visual selection automatically copied to the clipboard
 
 " Clipboard keys
 vmap <C-c> "+yi
@@ -134,6 +140,9 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Snippents:
 Plugin 'honza/vim-snippets'
+
+" Thesaurus
+Plugin 'beloglazov/vim-online-thesaurus'
 
 " End of plugins
 " All of your Plugins must be added before the following line
