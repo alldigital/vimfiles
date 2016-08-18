@@ -3,6 +3,11 @@ set nocompatible
 syntax enable
 colorscheme solarized
 
+" Set GUI font
+if has('gui_running')
+  set guifont=Pragmata\ for\ Powerline\ Medium\ 10
+endif
+
 " Generic options
 set history=1000    " History size
 set laststatus=2    " Always show status line
@@ -124,7 +129,6 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'FuzzyFinder'
 Plugin 'L9'
 Plugin 'matchit.zip'
-Plugin 'KevinGoodsell/vim-csexact'
 Plugin 'ConradIrwin/vim-bracketed-paste'
 
 " Snippet Management
@@ -143,6 +147,11 @@ Plugin 'honza/vim-snippets'
 
 " Thesaurus
 Plugin 'beloglazov/vim-online-thesaurus'
+
+" My Notes
+au BufRead,BufNewFile ~/.notes/* set ft=markdown
+nnoremap <leader>n :tabe ~/.notes/
+
 
 " End of plugins
 " All of your Plugins must be added before the following line
