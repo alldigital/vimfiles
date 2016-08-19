@@ -31,9 +31,13 @@ set hidden          " Allow hidden buffers
 set updatetime=250  " Update time = 250 ms
 
 " Tab settings
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
 set expandtab
+
+" Indenting options
+set shiftwidth=2
+set textwidth=80
 
 " Set line numbering and relative numbering mode
  set number
