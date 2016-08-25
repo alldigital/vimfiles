@@ -94,12 +94,6 @@ set clipboard=unnamedplus
 " set paste
 set go+=a               " Visual selection automatically copied to the clipboard
 
-" Clipboard keys
-vmap <C-c> "+yi
-vmap <C-x> "+c
-vmap <C-v> c<ESC>"+p
-imap <C-v> <ESC>"+pa
-
 " open help in vertical split
 au BufWinEnter {*.txt} if 'help' == &ft | wincmd H | nmap q :q<CR> | endif
 
