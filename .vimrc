@@ -97,7 +97,6 @@ set go+=a               " Visual selection automatically copied to the clipboard
 " open help in vertical split
 au BufWinEnter {*.txt} if 'help' == &ft | wincmd H | nmap q :q<CR> | endif
 
-
 " Scripts and Plugins " {{{
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim/
