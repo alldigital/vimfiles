@@ -1,7 +1,7 @@
 source ~/.vim-theme
 set nocompatible
 syntax enable
-colorscheme material
+colorscheme solarized
 
 " Set GUI font
 if has('gui_running')
@@ -37,7 +37,6 @@ set expandtab
 
 " Indenting options
 set shiftwidth=2
-set textwidth=80
 
 " Set line numbering and relative numbering mode
  set number
