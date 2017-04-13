@@ -1,7 +1,7 @@
 source ~/.vim-theme
 set nocompatible
 syntax enable
-colorscheme solarized
+colorscheme material
 
 " Set GUI font
 if has('gui_running')
